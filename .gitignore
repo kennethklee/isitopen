@@ -1,0 +1,21 @@
+/.c9revisions
+/.node_modules
+/node_modules
+*.log
+/tmp
+/coverage
+/rdoc
+/wiki
+/pkg
+/public/assets
+
+# Suggested ignores for pesky problem commiters
+# *~
+# *.diff
+# *.patch
+# *.psd
+# *.pdf
+.DS_Store
+npm-debug.log
+*.tmproj
+azure_error
