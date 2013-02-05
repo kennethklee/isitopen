@@ -1,0 +1,10 @@
+<header id="title">
+    <h1>Is It Open?</h1>
+</header>
+
+<section id="searchbar">
+    <input id="search" {{ (el) -> el.val('').focus() }} placeholder="Where you going?" autofocus="">
+</section>
+
+<section id="status" class="{{^todos}}hidden{{/todos}}">
+</section>
