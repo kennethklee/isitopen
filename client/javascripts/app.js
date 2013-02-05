@@ -2,10 +2,11 @@
 
     var app = can.Control({
         defaults: {
-            view: 'templates/app.mustache'
+            view: 'app'
         }
     }, {
         init: function() {
+            console.log(this.element);
             this.element.append(can.view(this.options.view, this.options));
         }
     });
