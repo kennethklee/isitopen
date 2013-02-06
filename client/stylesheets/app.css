@@ -1,12 +1,15 @@
 #isitopen {
     position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 600px;
-    height: 80px;
-    margin: 0 auto;
+    height: 160px;
 }
 
 #title {
-    margin-top: -120px;
     width: 100%;
     font-size: 70px;
     font-weight: bold;
@@ -18,8 +21,8 @@
 }
 
 #search {
-    font-size: 24px;
-    padding: 16px;
-    border: none;
+    width: 100%;
+    font-size: 28px;
+    padding: 15px 15px 5px 15px;
     box-shadow: none;
 }

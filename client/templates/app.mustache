@@ -4,7 +4,9 @@
 
 <section id="searchbar">
     <input id="search" {{ (el) -> el.val('').focus() }} placeholder="Where you going?" autofocus="">
+    <span class="help-block">Example: KFC near Toronto, Canada</span>
 </section>
 
-<section id="status" class="{{^todos}}hidden{{/todos}}">
+<section id="status" class="{{^places}}hidden{{/places}}">
+    Places exist!
 </section>

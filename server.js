@@ -29,11 +29,13 @@ var httpHandler = function(request, response) {
         return;
       }
 
-      console.log("file: " + filename);
       if (endsWith(filename, ".mustache")) {
-          response.writeHead(500, {"Content-Type": "text/mustache"});
+        response.writeHead(200, {"Content-Type": "text/mustache"});
+      } else if(endsWith(filename, ".ejs")) {
+        response.writeHead(200, {"Content-Type": "text/ejs"});
+      } else {
+        response.writeHead(200);
       }
-      response.writeHead(200);
       response.write(file, "binary");
       response.end();
     });

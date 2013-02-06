@@ -1,0 +1,15 @@
+<header id="title">
+  	<h1>Is It Open?</h1>
+</header>
+
+<section id="searchbar">
+  	<input id="search" placeholder="Where you going?" autofocus>
+  	<span class="help-block">Example: KFC near Toronto, Canada</span>
+</section>
+
+<% if (!app.attr('first_search')) { %>
+    <section id="status" class="<%= place.attr('open_now') ? 'open' : 'closed' %>">
+        <h2><%= place.attr('name') %> is <%= place.attr('open_now') ? 'Open' : 'Closed' %></h2>
+        <p><%= place.attr('address') %></p>
+    </section>
+<% } %>
