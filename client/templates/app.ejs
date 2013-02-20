@@ -4,12 +4,26 @@
 
 <section id="searchbar">
   	<input id="search" placeholder="Where you going?" autofocus>
-  	<span class="help-block">Example: KFC near Toronto, Canada</span>
+  	<span class="help-block">Example: <%= position.attr('latitude') && position.attr('longitude') ? 'Taco Bell' : 'KFC near Toronto, Canada' %></span>
 </section>
 
 <% if (!app.attr('first_search')) { %>
+<!--
     <section id="status" class="<%= place.attr('open_now') ? 'open' : 'closed' %>">
         <h2><%= place.attr('name') %> is <%= place.attr('open_now') ? 'Open' : 'Closed' %></h2>
         <p><%= place.attr('address') %></p>
     </section>
+-->
+
 <% } %>
+
+<section id="places">
+	<ul>
+        <% for( var i = 0; i < 2 && i < places.attr('length'); i++ ) { %>
+          	<li>
+                <h2><%= places[i].attr('name') %></h2>
+                <p><a target="_blank" href="https://maps.google.ca/maps?q=<%= places[i].attr('name') %>&ll=<%= places[i].attr('lat') %>,<%= places[i].attr('lng') %>"><%= places[i].attr('address') %></a></p>
+        	</li>
+        <% } %>
+    </ul>
+</section>
